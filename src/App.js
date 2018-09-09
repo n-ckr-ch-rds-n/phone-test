@@ -3,6 +3,8 @@ import './App.css';
 import PhoneData from './phonedata';
 import PriceBlock from './priceblock';
 import Selector from './selector';
+import PhoneImage from './phoneimage';
+import PhoneInfo from './phoneinfo';
 import Gold from './images/Apple_iPhone_8_Gold-full-product-front.png';
 import Silver from './images/Apple_iPhone_8_Silver_WS2-full-product-front.png';
 import Grey from './images/Apple_iPhone_8_Space_Grey_WS2-full-product-front.png';
@@ -67,8 +69,10 @@ class Page extends Component {
     return (
       <div className="Page">
         <PhoneImage colour={this.state.colour}/>
-        <p>{this.state.groupname}</p>
-        <p>{this.state.phonetype.displayDescription}</p>
+        <PhoneInfo
+          groupname={this.state.groupname}
+          description={this.state.phonetype.displayDescription}
+        />
         <Selector
           colour={this.state.phonetype.colourName}
           capacity={this.state.phonetype.memory}
