@@ -27,6 +27,8 @@ class Page extends Component {
       <div className="Page">
         <p>{this.state.groupname}</p>
         <p>{this.state.phonetype.displayDescription}</p>
+        <p>Colour:{this.state.phonetype.colourName}
+           Capacity: {this.state.phonetype.memory}</p>
       </div>
     )
   }
