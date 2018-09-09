@@ -14,7 +14,7 @@ const PhoneData = [
                 "merchandisingMedia": [
                     {
                         "id": "PR_IMAGE_URLS_THUMBS_FRONT",
-                        "value": "/images/desktop/Apple_iPhone_8_Gold-full-product-front.png"
+                        "value": "src/images/Apple_iPhone_8_Gold-full-product-front.png"
                     }
                 ],
                 "priceInfo": {
