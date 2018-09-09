@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import PhoneData from './phonedata'
 
@@ -19,13 +18,15 @@ class Page extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      phonedata: PhoneData
+      groupname: PhoneData[0].groupName,
+      phonetype: PhoneData[0].deviceSummary[0]
     }
   }
   render() {
     return (
       <div className="Page">
-        <p>{this.state.phonedata[0].groupName}</p>
+        <p>{this.state.groupname}</p>
+        <p>{this.state.phonetype.displayDescription}</p>
       </div>
     )
   }
