@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import PhoneData from './phonedata';
+import PriceBlock from './priceblock';
 import Gold from './images/Apple_iPhone_8_Gold-full-product-front.png';
 import Silver from './images/Apple_iPhone_8_Silver_WS2-full-product-front.png';
 import Grey from './images/Apple_iPhone_8_Space_Grey_WS2-full-product-front.png';
@@ -29,18 +30,23 @@ class Page extends Component {
 
   changeColour(e) {
     e.preventDefault();
-    if (e.target.value === 'gold') {
+    if (e.target.value === 'gold' && this.state.phonetype.memory === '64GB') {
       this.setState({ colour: Gold, phonetype: PhoneData[0].deviceSummary[0] });
-    } else if (e.target.value === 'silver') {
+    } else if (e.target.value === 'silver' && this.state.phonetype.memory === '64GB') {
       this.setState({ colour: Silver, phonetype: PhoneData[0].deviceSummary[1] });
-    } else if (e.target.value === 'grey') {
+    } else if (e.target.value === 'grey' && this.state.phonetype.memory === '64GB') {
       this.setState({ colour: Grey, phonetype: PhoneData[0].deviceSummary[2] });
-    };
+    } else if (e.target.value === 'gold' && this.state.phonetype.memory === '256GB') {
+      this.setState({ colour: Gold, phonetype: PhoneData[0].deviceSummary[3] });
+    } else if (e.target.value === 'silver' && this.state.phonetype.memory === '256GB') {
+      this.setState({ colour: Silver, phonetype: PhoneData[0].deviceSummary[4] });
+    } else if (e.target.value === 'grey' && this.state.phonetype.memory === '256GB') {
+      this.setState({ colour: Grey, phonetype: PhoneData[0].deviceSummary[5] });
+    }
   }
 
   changeCapacity(e) {
     e.preventDefault();
-    console.log(e.target.value);
     if (e.target.value === '64' && this.state.colour === Gold) {
       this.setState({ phonetype: PhoneData[0].deviceSummary[0] });
     } else if (e.target.value === '64' && this.state.colour === Silver) {
@@ -69,8 +75,8 @@ class Page extends Component {
         <p>Capacity: {this.state.phonetype.memory}</p>
         <button value='64' onClick={this.changeCapacity}>64</button>
         <button value='256' onClick={this.changeCapacity}>256</button>
-        <p>from £{this.state.phonetype.priceInfo.hardwarePrice.oneOffPrice.gross} upfront cost</p>
-        <p>When you pay £{this.state.phonetype.priceInfo.bundlePrice.monthlyPrice.gross} a month</p>
+        <PriceBlock upfront={this.state.phonetype.priceInfo.hardwarePrice.oneOffPrice.gross}
+        monthly={this.state.phonetype.priceInfo.bundlePrice.monthlyPrice.gross} />
       </div>
     )
   }
