@@ -68,18 +68,33 @@ class Page extends Component {
         <img src={this.state.colour} alt=""></img>
         <p>{this.state.groupname}</p>
         <p>{this.state.phonetype.displayDescription}</p>
-        <p>Colour: {this.state.phonetype.colourName}</p>
-        <button value='gold' onClick={this.changeColour}>Gold</button>
-        <button value='silver' onClick={this.changeColour}>Silver</button>
-        <button value='grey' onClick={this.changeColour}>Grey</button>
-        <p>Capacity: {this.state.phonetype.memory}</p>
-        <button value='64' onClick={this.changeCapacity}>64</button>
-        <button value='256' onClick={this.changeCapacity}>256</button>
-        <PriceBlock upfront={this.state.phonetype.priceInfo.hardwarePrice.oneOffPrice.gross}
-        monthly={this.state.phonetype.priceInfo.bundlePrice.monthlyPrice.gross} />
+        <Selector
+          colour={this.state.phonetype.colourName}
+          capacity={this.state.phonetype.memory}
+          changeColour={this.changeColour}
+          changeCapacity={this.changeCapacity}
+        />
+        <PriceBlock
+          upfront={this.state.phonetype.priceInfo.hardwarePrice.oneOffPrice.gross}
+          monthly={this.state.phonetype.priceInfo.bundlePrice.monthlyPrice.gross}
+        />
       </div>
     )
   }
+}
+
+const Selector = props => {
+  return (
+    <div className="Selector">
+      <p>Colour: {props.colour}</p>
+      <button value='gold' onClick={props.changeColour}>Gold</button>
+      <button value='silver' onClick={props.changeColour}>Silver</button>
+      <button value='grey' onClick={props.changeColour}>Grey</button>
+      <p>Capacity: {props.capacity}</p>
+      <button value='64' onClick={props.changeCapacity}>64</button>
+      <button value='256' onClick={props.changeCapacity}>256</button>
+    </div>
+  )
 }
 
 export default App;
