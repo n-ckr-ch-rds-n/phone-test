@@ -27,8 +27,10 @@ class Page extends Component {
       <div className="Page">
         <p>{this.state.groupname}</p>
         <p>{this.state.phonetype.displayDescription}</p>
-        <p>Colour:{this.state.phonetype.colourName}
-           Capacity: {this.state.phonetype.memory}</p>
+        <p>Colour: {this.state.phonetype.colourName}</p>
+        <p>Capacity: {this.state.phonetype.memory}</p>
+        <p>from £{this.state.phonetype.priceInfo.hardwarePrice.oneOffPrice.gross} upfront cost</p>
+        <p>When you pay £{this.state.phonetype.priceInfo.bundlePrice.monthlyPrice.gross} a month</p>
       </div>
     )
   }
