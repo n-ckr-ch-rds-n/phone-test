@@ -23,23 +23,30 @@ class Page extends Component {
       phonetype: PhoneData[0].deviceSummary[0],
       colour: Gold
     }
+    this.changeColour = this.changeColour.bind(this)
+  }
+
+  changeColour(e) {
+    e.preventDefault();
+    if (e.target.value === 'gold') {
+      this.setState({ colour: Gold });
+    } else if (e.target.value === 'silver') {
+      this.setState({ colour: Silver });
+    } else if (e.target.value === 'grey') {
+      this.setState({ colour: Grey });
+    };
   }
 
   render() {
-    function handleClick(e) {
-      e.preventDefault();
-      console.log(e.target.value);
-    }
-
     return (
       <div className="Page">
         <img src={this.state.colour} alt=""></img>
         <p>{this.state.groupname}</p>
         <p>{this.state.phonetype.displayDescription}</p>
         <p>Colour: {this.state.phonetype.colourName}</p>
-        <button value='gold' onClick={handleClick}>Gold</button>
-        <button value='silver' onClick={handleClick}>Silver</button>
-        <button value='grey' onClick={handleClick}>Grey</button>
+        <button value='gold' onClick={this.changeColour}>Gold</button>
+        <button value='silver' onClick={this.changeColour}>Silver</button>
+        <button value='grey' onClick={this.changeColour}>Grey</button>
         <p>Capacity: {this.state.phonetype.memory}</p>
         <p>from £{this.state.phonetype.priceInfo.hardwarePrice.oneOffPrice.gross} upfront cost</p>
         <p>When you pay £{this.state.phonetype.priceInfo.bundlePrice.monthlyPrice.gross} a month</p>
