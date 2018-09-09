@@ -1,0 +1,21 @@
+.PriceBlock {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  background-color: #e6e6e6;
+  margin-top: 10%;
+  padding: 5%;
+}
+
+.upfront {
+  grid-column: 1;
+  border-right: 0.5px;
+}
+
+.monthlyPrice {
+  grid-column: 2;
+}
+
+.price {
+  color: red;
+  font-size: 3vw;
+}

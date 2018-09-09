@@ -1,10 +1,15 @@
 import React from 'react';
+import './priceblock.css';
 
 const PriceBlock = props => {
   return (
     <div className="PriceBlock">
-      <p>from £{props.upfront} upfront cost</p>
-      <p>When you pay £{props.monthly} a month</p>
+      <div className="upfront">
+        <p>from <span className="price">£{props.upfront}</span> upfront cost</p>
+      </div>
+      <div className="monthly">
+        <p>When you pay <span className="price">£{props.monthly}</span> a month</p>
+      </div>
     </div>
   )
 }
