@@ -1,0 +1,38 @@
+.Selector {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.Colour {
+  grid-column: 1;
+}
+
+.Capacity {
+  grid-column: 2;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+button {
+  height: 50px;
+  width: 50px;
+  margin: 2%;
+}
+
+.gold {
+  background-color: #f8e7dc;
+}
+
+.silver {
+  background-color: #e1e2e3;
+}
+
+.grey {
+  background-color: #232324;
+}
+
+.capacitybutton {
+  font-size: 1.5vw;
+}
