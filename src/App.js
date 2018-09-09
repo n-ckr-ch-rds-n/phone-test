@@ -48,6 +48,8 @@ class Page extends Component {
         <button value='silver' onClick={this.changeColour}>Silver</button>
         <button value='grey' onClick={this.changeColour}>Grey</button>
         <p>Capacity: {this.state.phonetype.memory}</p>
+        <button value='64'>64</button>
+        <button value='256'>256</button>
         <p>from £{this.state.phonetype.priceInfo.hardwarePrice.oneOffPrice.gross} upfront cost</p>
         <p>When you pay £{this.state.phonetype.priceInfo.bundlePrice.monthlyPrice.gross} a month</p>
       </div>
