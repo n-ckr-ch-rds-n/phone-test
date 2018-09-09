@@ -29,11 +29,11 @@ class Page extends Component {
   changeColour(e) {
     e.preventDefault();
     if (e.target.value === 'gold') {
-      this.setState({ colour: Gold });
+      this.setState({ colour: Gold, phonetype: PhoneData[0].deviceSummary[0] });
     } else if (e.target.value === 'silver') {
-      this.setState({ colour: Silver });
+      this.setState({ colour: Silver, phonetype: PhoneData[0].deviceSummary[1] });
     } else if (e.target.value === 'grey') {
-      this.setState({ colour: Grey });
+      this.setState({ colour: Grey, phonetype: PhoneData[0].deviceSummary[2] });
     };
   }
 
