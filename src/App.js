@@ -24,6 +24,7 @@ class Page extends Component {
       colour: Gold
     }
     this.changeColour = this.changeColour.bind(this)
+    this.changeCapacity = this.changeCapacity.bind(this)
   }
 
   changeColour(e) {
@@ -37,6 +38,24 @@ class Page extends Component {
     };
   }
 
+  changeCapacity(e) {
+    e.preventDefault();
+    console.log(e.target.value);
+    if (e.target.value === '64' && this.state.colour === Gold) {
+      this.setState({ phonetype: PhoneData[0].deviceSummary[0] });
+    } else if (e.target.value === '64' && this.state.colour === Silver) {
+      this.setState({ phonetype: PhoneData[0].deviceSummary[1] });
+    } else if (e.target.value === '64' && this.state.colour === Grey) {
+      this.setState({ phonetype: PhoneData[0].deviceSummary[2] });
+    } else if (e.target.value === '256' && this.state.colour === Gold) {
+      this.setState({ phonetype: PhoneData[0].deviceSummary[3] });
+    } else if (e.target.value === '256' && this.state.colour === Silver) {
+      this.setState({ phonetype: PhoneData[0].deviceSummary[4] });
+    } else if (e.target.value === '256' && this.state.colour === Grey) {
+      this.setState({ phonetype: PhoneData[0].deviceSummary[5] });
+    }
+  }
+
   render() {
     return (
       <div className="Page">
@@ -48,8 +67,8 @@ class Page extends Component {
         <button value='silver' onClick={this.changeColour}>Silver</button>
         <button value='grey' onClick={this.changeColour}>Grey</button>
         <p>Capacity: {this.state.phonetype.memory}</p>
-        <button value='64'>64</button>
-        <button value='256'>256</button>
+        <button value='64' onClick={this.changeCapacity}>64</button>
+        <button value='256' onClick={this.changeCapacity}>256</button>
         <p>from £{this.state.phonetype.priceInfo.hardwarePrice.oneOffPrice.gross} upfront cost</p>
         <p>When you pay £{this.state.phonetype.priceInfo.bundlePrice.monthlyPrice.gross} a month</p>
       </div>
