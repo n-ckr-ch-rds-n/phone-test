@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import './page.css';
+
 import PhoneData from './phonedata';
 import PriceBlock from './priceblock';
 import Selector from './selector';
@@ -57,21 +59,25 @@ class Page extends Component {
   render() {
     return (
       <div className="Page">
-        <PhoneImage colour={this.state.colour}/>
-        <PhoneInfo
-          groupname={this.state.groupname}
-          description={this.state.phonetype.displayDescription}
-        />
-        <Selector
-          colour={this.state.phonetype.colourName}
-          capacity={this.state.phonetype.memory}
-          changeColour={this.changeColour}
-          changeCapacity={this.changeCapacity}
-        />
-        <PriceBlock
-          upfront={this.state.phonetype.priceInfo.hardwarePrice.oneOffPrice.gross}
-          monthly={this.state.phonetype.priceInfo.bundlePrice.monthlyPrice.gross}
-        />
+        <div className="Column1">
+          <PhoneImage colour={this.state.colour}/>
+        </div>
+        <div className="Column2">
+          <PhoneInfo
+            groupname={this.state.groupname}
+            description={this.state.phonetype.displayDescription}
+          />
+          <Selector
+            colour={this.state.phonetype.colourName}
+            capacity={this.state.phonetype.memory}
+            changeColour={this.changeColour}
+            changeCapacity={this.changeCapacity}
+          />
+          <PriceBlock
+            upfront={this.state.phonetype.priceInfo.hardwarePrice.oneOffPrice.gross}
+            monthly={this.state.phonetype.priceInfo.bundlePrice.monthlyPrice.gross}
+          />
+        </div>
       </div>
     )
   }
