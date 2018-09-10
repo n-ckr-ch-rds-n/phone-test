@@ -1,12 +1,12 @@
 # Vodafone Tech Test
 
-This app was built as the solution to a tech test set by Vodafone. The user interface displays a picture of a phone, along with information including price and memory capacity. Users can click on the colour and capacity buttons and the app will update the image and price.
+This app was built as the solution to a tech test set by Vodafone. The user interface displays a picture of a phone, along with information including price and memory capacity. Users can click on the colour and capacity buttons and the app will update the image and price. It's deployed on Heroku [here](https://tranquil-coast-95833.herokuapp.com/).
 
 ![ScreenShot](public/ScreenShot.png)
 
 #### My Approach
 
-The test instructions emphasised the importance of making the code readable, concise and reusable. This led me to build my solution using React and a modular design.
+The test instructions emphasised the importance of making the code readable, concise and reusable. This encouraged be to use React, which is well-suited to modular design and making reusable components.
 
 My solution employs just one stateful component, `<Page />`, which renders several stateless functional components and funnels data to them as props. Clicking on the buttons changes state in the parent component, re-rendering the page.
 
