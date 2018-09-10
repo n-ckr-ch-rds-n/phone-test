@@ -1,10 +1,10 @@
 import React from 'react';
 import { shallow, mount, render } from 'enzyme';
-import Page from './page';
-import PhoneImage from './phoneimage';
-import PhoneInfo from './phoneinfo';
-import Selector from './selector';
-import PriceBlock from './priceblock';
+import Page from '../page';
+import PhoneImage from '../phoneimage';
+import PhoneInfo from '../phoneinfo';
+import Selector from '../selector';
+import PriceBlock from '../priceblock';
 
 describe('<Page />', () => {
 
