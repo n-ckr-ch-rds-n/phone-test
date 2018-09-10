@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow, mount, render } from 'enzyme';
-import Selector from '../selector';
-import Page from '../page';
+import Selector from '../components/selector';
+import Page from '../components/page';
 
 
 describe('<Selector />', () => {
