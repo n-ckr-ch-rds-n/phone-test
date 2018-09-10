@@ -1,5 +1,5 @@
 import React from 'react';
-import './selector.css';
+import '../styles/selector.css';
 
 const Selector = props => {
   return (

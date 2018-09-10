@@ -1,5 +1,5 @@
 import React from 'react';
-import './phoneimage.css';
+import '../styles/phoneimage.css';
 
 const PhoneImage = props => {
   return (

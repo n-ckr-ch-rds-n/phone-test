@@ -1,5 +1,5 @@
 import React from 'react';
-import './priceblock.css';
+import '../styles/priceblock.css';
 
 const PriceBlock = props => {
   return (
