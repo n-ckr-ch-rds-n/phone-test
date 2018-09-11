@@ -6,7 +6,7 @@ This app was built as the solution to a tech test set by Vodafone. The user inte
 
 ### My Approach
 
-The test instructions emphasised the importance of making the code readable, concise and reusable. This encouraged me to use React, which is well-suited to creating modular designs with reusable components. I first used React for my final Makers group project, and have used it since graduating in a couple of side projects.
+The test instructions emphasised the importance of making the code readable, concise and reusable. This encouraged me to use React, which is well-suited to creating modular designs with reusable components. I first used React for my final Makers group project, and have used it since graduating in a couple of side projects, so it's still quite new to me.
 
 My components are well-named (I hope!), and concise: I have attempted to obey the single-responsibility principle throughout. The solution employs just one stateful component, `<Page />`, which renders several stateless functional components and funnels data to them as props. Clicking on the buttons changes state in the parent component, re-rendering the page.
 
