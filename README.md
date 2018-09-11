@@ -6,11 +6,13 @@ This app was built as the solution to a tech test set by Vodafone. The user inte
 
 #### My Approach
 
-The test instructions emphasised the importance of making the code readable, concise and reusable. This encouraged be to use React, which is well-suited to modular design and making reusable components.
+The test instructions emphasised the importance of making the code readable, concise and reusable. This encouraged be to use React, which is well-suited to creating modular designs with reusable components. My components are well-named (I hope!), and concise: I have attempted to obey the single-responsibility principle throughout.
 
 My solution employs just one stateful component, `<Page />`, which renders several stateless functional components and funnels data to them as props. Clicking on the buttons changes state in the parent component, re-rendering the page.
 
-The components are organised into separate files so they can be imported easily and are stateless, making them both reusable and maintainable.
+The components are organised into separate files so they can be imported easily, and they are stateless, making them both reusable and maintainable.
+
+I have used ESLint to check the formatting of my code, ensuring that it meets the highest standards.
 
 #### Running the App
 To run the app, simply clone this repo, `cd` into it in your terminal, then run `npm install` to install the dependencies and `npm start` to start the server. Finally, navigate to http://localhost:3000.
