@@ -4,7 +4,7 @@ This app was built as the solution to a tech test set by Vodafone. The user inte
 
 ![ScreenShot](public/ScreenShot.png)
 
-#### My Approach
+### My Approach
 
 The test instructions emphasised the importance of making the code readable, concise and reusable. This encouraged be to use React, which is well-suited to creating modular designs with reusable components. My components are well-named (I hope!), and concise: I have attempted to obey the single-responsibility principle throughout.
 
@@ -14,12 +14,12 @@ The components are organised into separate files so they can be imported easily,
 
 I have used ESLint to check the formatting of my code, ensuring that it meets the highest standards.
 
-#### Running the App
+### Running the App
 To run the app, simply clone this repo, `cd` into it in your terminal, then run `npm install` to install the dependencies and `npm start` to start the server. Finally, navigate to http://localhost:3000.
 
 The components are fully unit tested using Jest and Enzyme. To run the tests use the `npm test` command.
 
-#### Technologies Used
+### Technologies Used
 - JavaScript
 - React
 - CSS
